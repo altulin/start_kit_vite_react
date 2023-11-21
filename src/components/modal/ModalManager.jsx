@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import ModalAuth1 from "./auth/ModalAuth1";
-import useGetCurrentModal from "../../hooks/getCurrentModal";
+import useGetCurrentModal from "@/hooks/getCurrentModal";
 
 const ModalManager = () => {
   const { modalState } = useSelector((state) => state.app);

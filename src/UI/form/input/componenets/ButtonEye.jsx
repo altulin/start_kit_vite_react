@@ -1,5 +1,5 @@
-import { ReactComponent as IconEye } from "../../../../images/svg/eye.svg";
-import { ReactComponent as IconEyeOff } from "../../../../images/svg/eye-off.svg";
+import IconEye from "@/images/svg/eye.svg";
+import IconEyeOff from "@/images/svg/eye-off.svg";
 
 const ButtonEye = ({ isTypeText, setType }) => {
   return (
@@ -8,7 +8,7 @@ const ButtonEye = ({ isTypeText, setType }) => {
       className="input-block__eye"
       onClick={() => setType(!isTypeText)}
     >
-      {!isTypeText && <IconEye />}
+      {!isTypeText && <IconEye stroke="red" />}
       {isTypeText && <IconEyeOff />}
     </button>
   );

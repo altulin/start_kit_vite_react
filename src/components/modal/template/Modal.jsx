@@ -1,11 +1,11 @@
 import style from "./Modal.module.scss";
 import clsx from "clsx";
 import ModalPortal from "../ModalPortal";
-// import { ReactComponent as Icon } from "../../../images/svg/close.svg";
+import Icon from "@/images/svg/menuClose.svg";
 import { useDispatch } from "react-redux";
-import { clearAllStep } from "../../../store/appSlice";
+import { clearAllStep } from "@/store/appSlice";
 import { useClickAway } from "@uidotdev/usehooks";
-import useLockBodyScroll from "../../../hooks/lockBodyScroll";
+import useLockBodyScroll from "@/hooks/lockBodyScroll";
 
 const Modal = ({ children, open = false }) => {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const Modal = ({ children, open = false }) => {
             className={clsx(style.modal__close)}
             onClick={() => dispatch(clearAllStep())}
           >
-            {/* <Icon /> */}
+            <Icon />
           </button>
           {children}
         </div>

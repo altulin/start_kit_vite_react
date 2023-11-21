@@ -14,6 +14,7 @@
     "@reduxjs/toolkit": "^1.9.7",
     "@uidotdev/usehooks": "^2.4.1",
     "clsx": "^2.0.0",
+    "formik": "^2.4.5",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.9",
@@ -21,9 +22,11 @@
     "react-redux": "^8.1.3",
     "react-router-dom": "^6.19.0",
     "react-router-hash-link": "^2.4.3",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "yup": "^1.3.2"
   },
   "devDependencies": {
+    "@svgx/vite-plugin-react": "^1.0.1",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@vitejs/plugin-react": "^4.2.0",
