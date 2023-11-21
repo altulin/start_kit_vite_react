@@ -18,7 +18,7 @@ const appSlice = createSlice({
   initialState: {
     isMobileOrTablet: false,
     modalState: {
-      auth: { step: 0 },
+      auth: { step: 1 },
     },
   },
 
