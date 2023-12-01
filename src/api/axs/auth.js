@@ -1,5 +1,5 @@
 import axs from "../service/AXS";
-import { postAuthorization } from "../service/path";
+import { postAuthorization, testPath } from "../service/path";
 
 export const authAuthorization = (phoneNumber, password) => {
   return axs.post(
@@ -8,6 +8,16 @@ export const authAuthorization = (phoneNumber, password) => {
       phoneNumber,
       password,
     },
+    {
+      headers: {},
+    }
+  );
+};
+
+export const getTest = () => {
+  return axs.get(
+    testPath,
+    {},
     {
       headers: {},
     }

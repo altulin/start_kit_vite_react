@@ -1,15 +1,22 @@
 import CheckIcon from "@/images/svg/eye.svg";
+import style from "../Input.module.scss";
+import clsx from "clsx";
 
 const CheckboxChildren = () => {
   return (
     <>
-      <span className="checkbox__indicator">
+      <span className={clsx(style.indicator)}>
         <CheckIcon />
       </span>
-      <span className="checkbox__label">
+      <span className={clsx(style.indicator__label)}>
         <span>Согласен(на)</span>
         &nbsp;
-        <a className="link-doc" href="/" target="_blank" rel="noreferrer">
+        <a
+          className={clsx(style.indicator__link)}
+          href="/"
+          target="_blank"
+          rel="noreferrer"
+        >
           с правилами акции
         </a>
       </span>

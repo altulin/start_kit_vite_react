@@ -77,3 +77,6 @@ export const postVerifyPhoneNumber =
 // Товары
 // Список товаров
 export const getGoods = "/goods/";
+
+// Тест
+export const testPath = "posts";

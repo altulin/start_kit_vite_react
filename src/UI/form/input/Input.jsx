@@ -1,5 +1,6 @@
 import ErrorText from "./componenets/ErrorText";
 import clsx from "clsx";
+import style from "./Input.module.scss";
 
 const Input = ({
   type,
@@ -20,24 +21,24 @@ const Input = ({
   return (
     <div
       className={clsx(
-        "input-block",
-        `input-block--${type}`,
-        `${type}`,
+        style.block,
+        style[`block--${type}`],
+        style[`${type}`],
         className
       )}
     >
       <label
         className={clsx(
-          "input-block__label",
-          `input-block__label--${type}`,
-          `${type}__label`
+          style.label,
+          style[`label--${type}`],
+          style[`${type}__label`]
         )}
       >
         <span
           className={clsx(
-            "input-block__name",
-            `input-block__name--${type}`,
-            `${type}__name`
+            style.name,
+            style[`name--${type}`],
+            style[`${type}__name`]
           )}
         >
           {label}
@@ -45,11 +46,11 @@ const Input = ({
         <input
           type={type}
           className={clsx(
-            "input-block__input",
-            `input-block__input--${type}`,
-            `${type}__input`,
-            formik.errors[`${name}`] && "input-block__input--error",
-            formik.errors[`${name}`] && `${type}__input--error`
+            style.input,
+            style[`input--${type}`],
+            style[`${type}__input`],
+            formik.errors[`${name}`] && style["input--error"],
+            formik.errors[`${name}`] && style[`${type}__input--error`]
           )}
           placeholder={placeholder}
           name={name}

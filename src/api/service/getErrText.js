@@ -1,6 +1,6 @@
 import { store } from "@/store";
-import { setErrorModal } from "@/store/appSlice";
-import { setUser } from "@/store/appSlice";
+// import { setErrorModal } from "@/store/appSlice";
+// import { setUser } from "@/store/appSlice";
 
 export const getErrText = (error) => {
   let errorText = "";
@@ -11,7 +11,7 @@ export const getErrText = (error) => {
 
     case 401:
       localStorage.clear();
-      store.dispatch(setUser(null));
+      // store.dispatch(setUser(null));
       return;
 
     case 430:
@@ -71,5 +71,5 @@ export const getErrText = (error) => {
       errorText = "Ошибка соединения с сервером";
   }
 
-  store.dispatch(setErrorModal(errorText));
+  // store.dispatch(setErrorModal(errorText));
 };

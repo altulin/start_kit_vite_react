@@ -18,8 +18,9 @@ const appSlice = createSlice({
   initialState: {
     isMobileOrTablet: false,
     modalState: {
-      auth: { step: 1 },
+      auth: { step: 0 },
     },
+    posts: null,
   },
 
   reducers: {
@@ -32,11 +33,11 @@ const appSlice = createSlice({
       state.modalState = initModal();
     },
 
-    // setIsMobileOrTablet(state, action) {
-    //   state.isMobileOrTablet = action.payload;
-    // },
+    setPosts(state, action) {
+      state.posts = action.payload;
+    },
   },
 });
 
-export const { stepTo, clearAllStep } = appSlice.actions;
+export const { stepTo, clearAllStep, setPosts } = appSlice.actions;
 export default appSlice.reducer;

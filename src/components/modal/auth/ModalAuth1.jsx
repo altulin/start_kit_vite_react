@@ -1,9 +1,11 @@
+/* eslint-disable react-refresh/only-export-components */
 import Modal from "../template/Modal";
 import style from "../template/Modal.module.scss";
 import clsx from "clsx";
 import { useDispatch } from "react-redux";
 import { useRenderCount } from "@uidotdev/usehooks";
 import { stepTo } from "@/store/appSlice";
+import { memo } from "react";
 
 const ModalAuth1 = ({ open }) => {
   const dispatch = useDispatch();
@@ -25,4 +27,4 @@ const ModalAuth1 = ({ open }) => {
     </Modal>
   );
 };
-export default ModalAuth1;
+export default memo(ModalAuth1);
